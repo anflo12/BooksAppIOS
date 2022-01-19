@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel:BooksViewModel = BooksViewModel()
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        HomeScreen()
+            .environmentObject(viewModel)
     }
 }
 
